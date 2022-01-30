@@ -5,7 +5,7 @@ This module allows you to compute the k-Means algorithm with n-dimensional data.
 
 ## Usage via Commandline
 ```js
-deno run --allow-net https://deno.land/x/k_means_algorithm/test.ts
+deno run --allow-net https://deno.land/x/k_means_algorithm@1.0.3/test.ts  //or newer version
 ```
 
 ## Usage Example
