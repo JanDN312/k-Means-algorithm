@@ -20,9 +20,11 @@ export class Kmeans{
     getkmeans(inputlist: Array<number[]>, k: number){
         var initpoint1=inputlist[0]
         var initpoint2=inputlist[1]
+        var list1:Array<number[]> =[]
+        var list2:Array<number[]> =[]
         for (let i = 0; i < k; i++){
-            var list1:Array<number[]>=[]
-            var list2:Array<number[]>=[]
+            list1 =[]
+            list2 =[]
             for (let x = 0; x < inputlist.length; x++){
                 var distpoint1=this.getDistancebetwPoints(inputlist[x],initpoint1)
                 var distpoint2=this.getDistancebetwPoints(inputlist[x],initpoint2)
@@ -31,6 +33,6 @@ export class Kmeans{
             initpoint1=this.getmeanofdata(list1)
             initpoint2=this.getmeanofdata(list2)
         }
-        return [initpoint1,initpoint2]
+        return [initpoint1,initpoint2,list1,list2]
     }
 }
